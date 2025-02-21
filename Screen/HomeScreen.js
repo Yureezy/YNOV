@@ -13,7 +13,6 @@ import {
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { useTheme } from '../context/ThemeContext';
 
-// Using default parameters instead of defaultProps
 export default function HomeScreen({ 
   tasks = [], 
   setTasks = () => {}, 
