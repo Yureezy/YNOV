@@ -18,7 +18,7 @@ Une application de gestion de tâches moderne et intuitive développée avec Rea
 1. Cloner le repository :
 
 git clone https://github.com/Yureezy/YNOV
-cd my-to-do
+cd YNOV
 
 2. Installer les dépendances :
 
