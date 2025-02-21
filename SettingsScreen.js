@@ -6,10 +6,12 @@ import { useTheme } from './context/ThemeContext';
 export default function SettingsScreen() {
   const { theme, toggleTheme } = useTheme();
 
+  // Fonction pour rendre un élément de paramètre
   const renderSettingItem = ({ icon, title, value, onPress, type = 'toggle' }) => (
     <TouchableOpacity 
       style={[styles.settingItem, { borderBottomColor: theme.colors.border }]} 
       onPress={onPress}
+      key={title}
     >
       <View style={styles.settingItemLeft}>
         <Icon name={icon} size={24} color={theme.colors.primary} style={styles.settingIcon} />
@@ -28,8 +30,9 @@ export default function SettingsScreen() {
     </TouchableOpacity>
   );
 
+  // Fonction pour rendre une section de paramètres
   const renderSection = (title, children) => (
-    <View style={styles.section}>
+    <View style={styles.section} key={title}>
       <Text style={[styles.sectionTitle, { color: theme.colors.secondary }]}>{title}</Text>
       <View style={[styles.sectionContent, { backgroundColor: theme.colors.surface }]}>
         {children}

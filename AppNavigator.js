@@ -16,6 +16,7 @@ export default function AppNavigator() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
+        // Définir les icônes pour chaque onglet
         tabBarIcon: ({ color, size }) => {
           let iconName;
           if (route.name === 'Menu') iconName = 'home-outline';
@@ -56,7 +57,7 @@ function ArchivedTasksScreen({ archivedTasks }) {
         data={archivedTasks}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View style={[styles.taskContainer, { backgroundColor: theme.colors.surface }]}>
+          <View style={[styles.taskContainer, { backgroundColor: theme.colors.surface }]} key={item.id}>
             <Text style={[styles.taskText, { color: theme.colors.text }]}>{item.text}</Text>
             <Text style={[styles.taskDescription, { color: theme.colors.secondary }]}>
               {item.description}
