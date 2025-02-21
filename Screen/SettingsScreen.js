@@ -99,7 +99,7 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 64,
+    paddingTop: 60,
   },
   section: {
     marginBottom: 24,
