@@ -34,6 +34,7 @@ export default function AppNavigator() {
           backgroundColor: theme.colors.surface,
         },
         headerTintColor: theme.colors.text,
+        headerShown: false,//pour masquer les titres dans le Header
       })}
     >
       <Tab.Screen name="Archives">
